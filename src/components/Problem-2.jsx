@@ -11,8 +11,7 @@ const Problem2 = () => {
   const [onlyEven, setOnlyEven] = useState(false);
   const [contacts, setContacts] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-  const [filteredContacts, setFilteredContacts] = useState([]
-  );
+  const [filteredContacts, setFilteredContacts] = useState([]);
   useEffect(() => {
     const filtered= 
     onlyEven ? contacts?.filter((contact) => contact.id % 2 === 0) : contacts
@@ -109,8 +108,8 @@ const Problem2 = () => {
   };
 
   useEffect(() => {
-    // You can also trigger search when the searchInput state changes
     handleSearch();
+    fetchContacts()
   }, [searchInput]);
 
   return (
